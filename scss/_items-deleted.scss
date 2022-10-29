@@ -1,0 +1,13 @@
+/* ELEMENTOS DISPLAY NONE */
+
+.redes-sociales-container h2, .prod-mobile {
+    display: none;
+  }
+  
+  @media screen and (max-width: 320px) {
+    /* ELEMENTOS ELIMINADOS */
+  
+    .iframe-mapa, .container-aside, .container-form, .dropdown, .not-mobile, .floating-buttons, .barra-sup {
+      display: none;
+    }
+  }

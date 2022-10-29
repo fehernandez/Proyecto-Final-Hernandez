@@ -1,0 +1,158 @@
+/* FOOTER START */
+
+.container-footer {
+    background-color: white;
+    display: flex;
+    padding-right: 5%;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  
+  /* MAPA START*/
+  
+  .iframe-mapa {
+    margin-left: 5%;
+    margin-top: 60px;
+    margin-right: 200px;
+    width: 1900px;
+    height: 340px;
+    border-radius: 5px;
+  }
+  
+  /* MAPA END*/
+  
+  /* NAVBAR FOOTER START */
+  
+  .border-navbar-footer {
+    flex-direction: column;
+    display: flex;
+    margin-left: 3%;
+    color: black;
+    padding-top: 70px;
+    min-width: 16%;
+  
+    li {
+      transition: all 500ms;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    a{
+      color: black;
+    }
+  }
+
+
+
+  .redes-sociales-container {
+    margin-top: 80px;
+  }
+  
+  .redes-sociales-border {
+    display: flex;
+    padding-bottom: 10px;
+  
+    a {
+      padding-left: 10px;
+      color: black;
+      font-size: 90%;
+    }
+  }
+  
+  .redes-sociales-container img {
+    align-items: left;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* NAVBAR FOOTER END */
+  
+  /* FOOTER END */
+  
+  @media screen and (max-width: 320px) {
+    /* FOOTER START */
+  
+    /* NAVBAR FOOTER START */
+  
+    .container-footer {
+      padding: 0%;
+      padding-bottom: 10px;
+    }
+  
+    /* NAVBAR FOOTER START */
+  
+    .border-navbar-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: repeat(5, 1fr);
+      color: black;
+      padding-top: 10%;
+      width: 60%;
+      padding: 0%;
+      margin-bottom: 0%;
+  
+      li a {
+        color: white;
+        font-size: 50%;
+        transition: none;
+  
+        /* transition: all 0.5s; */
+        text-decoration: none;
+      }
+    }
+  
+    /* .border-navbar-footer li a:hover{
+        color: gray;
+    } */
+  
+    .border-narbar-lista {
+      margin-top: 0px;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      width: 250%;
+      margin-left: 15%;
+    }
+  
+    .subtitulo-redes {
+      margin-left: 20px;
+      margin-top: 10px;
+      width: 120%;
+      font-size: 54%;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .redes-sociales-container {
+      margin-left: 80px;
+      height: 100%;
+      margin-top: 8%;
+  
+      h2 {
+        display: block;
+      }
+    }
+  
+    .redes-sociales-border {
+      display: flex;
+      padding-bottom: 10px;
+      margin-left: 35px;
+  
+      a {
+        padding-left: 10px;
+        color: white;
+        font-size: 23px;
+      }
+    }
+  
+    .redes-sociales-container img {
+      align-items: left;
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* NAVBAR FOOTER END */
+  
+    /* FOOTER FINAL */
+  }

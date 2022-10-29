@@ -1,0 +1,158 @@
+/* ACERCA DE INCIO */
+
+.acerca-de-container-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1f;
+    border-radius: 15px;
+    border: white 5px solid;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 3%;
+    padding-bottom: 30px;
+  }
+  
+  .container-acerca-flex {
+    display: flex;
+  }
+  
+  .acerca-de-card {
+    display: flex;
+    color: white;
+    margin: 50px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+
+    p{
+      color: black;
+    }
+  }
+  
+  .container-acerca-flex {
+    
+    img {
+    width: 25%;
+    margin-right: 50px;
+  }
+  }
+
+  .container-acerca-general {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    border: 5px solid gray;
+    color: white;
+  }
+  
+  .info {
+    display: flex;
+    width: 50%;
+  }
+  
+  .acerca-de-card {
+    
+    img {
+    transition: all 500ms;
+    width: 20%;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .acerca-de-card:nth-child(2){
+    img{
+      margin-right: 0%;
+      margin-left: 50px;
+    }
+  }
+
+/* ACERCA DE END */
+
+@media screen and (max-width: 320px) {
+  /* ACERCA DE INCIO */
+
+  .acerca-de-container-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    background-color: black;
+    border-radius: 15px;
+    border: white 5px solid;
+    align-items: center;
+    width: 90%;
+    margin: 20px;
+    padding-bottom: 30px;
+  }
+
+  .container-acerca-flex {
+    display: flex;
+  }
+
+  .acerca-de-card {
+    display: flex;
+    color: white;
+    margin: 5%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 93%;
+    margin-right: 0px;
+
+    p {
+      font-size: 40%;
+      margin-bottom: 0%;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  .container-acerca-flex img {
+    width: 30%;
+  }
+
+  .container-acerca-general {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+    margin-right: 140px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    border: 5px solid gray;
+    color: white;
+  }
+
+  .info {
+    display: flex;
+    width: 50%;
+    height: 1%;
+  }
+
+  .acerca-de-img {
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    justify-content: center;
+    margin-right: 0%;
+  }
+
+  // ACERCA DE END
+}
