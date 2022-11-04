@@ -2,69 +2,241 @@
 /* RECETAS-IMAGENES START */
 
 .container-recetas-flex {
-    display: flex;
-  }
-  
-  .container-recetas-padre {
-    width: 35%;
-    margin-left: 20%;
-    margin-top: 5%;
-    right: 10%;
+  display: flex;
+}
+
+.container-recetas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  box-shadow: 1px 1px 15px black;
+}
+
+.container-recetas-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  justify-content: center;
+  margin-top: 5%;
+  position: relative;
+  gap: 0;
+  text-align: center;
+}
+
+.recetas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+
+  h3 {
+    @include config-words;
     position: relative;
+    width: min-content;
+    left: 45%;
+    padding-bottom: 0;
+    margin-bottom: 3%;
+    transition: 500ms all;
+    font-size: 2.5rem;
+    padding: 1%;
+    margin-bottom: 1%;
+
+    h3:hover {
+      transform: scale(1.1);
+    }
   }
-  
-  .container-recetas-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
+
+  h3:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: black;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  h3:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  img {
+    width: 34%;
     box-shadow: 1px 1px 15px black;
+    border-radius: 5px;
+    transition: 1000ms all;
+    margin-bottom: 6%;
+    vertical-align: center;
+    justify-content: center;
   }
-  
-  .receta {
-    &:first-child {
-      grid-row: 1/3;
-    }
-  
-    img {
-      width: 100%;
-      height: auto;
-      transition: 1000ms all;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  
-    display: flex;
-    overflow: hidden;
+
+}
+
+.receta {
+  &:first-child {
+    grid-row: 1/3;
   }
-  
-  @supports (object-fit: cover) {
-    .receta img {
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
+
+  img {
+    width: 100%;
+    height: auto;
+    transition: 1000ms all;
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
-  
-  /* RECETAS-IMAGENES END */
-  
-  /* ASIDE TEXT START */
-  
-  .container-texto-aside {
-    width: 40%;
-    text-align: center;
-    align-items: center;
+
+  display: flex;
+  overflow: hidden;
+}
+
+@supports (object-fit: cover) {
+  .receta img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
-  
-  .texto-aside p {
-    font-size: 90%;
+}
+
+
+.card-text {
+  a {
+    transition: all 500ms;
+  }
+
+  .a:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+/* RECETAS-IMAGENES END */
+
+/* ASIDE TEXT START */
+
+.container-texto-aside {
+  width: 40%;
+  text-align: center;
+  align-items: center;
+}
+
+.texto-aside {
+  p {
+    font-size: 2.2rem;
     margin: 0px;
-    margin-top: 15%;
+    margin-top: 25%;
     height: 50%;
   }
-  
-  // ASIDE TEXT END
-  
-  /* RECETAS END */
+}
+
+// ASIDE TEXT END
+
+/* RECETAS END */
+
+// RECETAS ALFAJORES START
+
+.container-grid-recetas-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 40px;
+  justify-items: center;
+  gap: 2rem;
+
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card-body{
+  padding-bottom: 0;
+}
+.ingredientes-list {
+  padding-left: 0%;
+  align-items: end;
+
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+.card.mb-3.border-dark {
+  width: 100%;
+}
+
+// RECETAS ALFAJORES END
+
+// RECETAS BUDINES START
+
+.container-grid-recetas-budines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 40px;
+  gap: 2rem;
+
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card-body{
+  padding-bottom: 0;
+}
+.ingredientes-list {
+  padding-left: 0%;
+  align-items: end;
+
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+.card.mb-3.border-dark {
+  width: 100%;
+}
+
+
+
+@media screen and (min-width: 320px) {
+
+
+  .container-recetas-padre {
+    margin-top: 5%;
+  }
+
+  .container-recetas-grid {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .container-recetas-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-texto-aside {
+    width: 100%;
+
+    .texto-aside {
+      p {
+        font-size: 1.2rem;
+        margin-top: 5%;
+        padding: 0.5rem;
+
+      }
+    }
+  }
+}

@@ -1,130 +1,158 @@
 /* HEADER INCIO */
 
-// Barra Superior START
-
-.barra-sup {
-  grid-column: 1/7;
-  text-align: center;
-  background-color: black;
-  height: 125%;
-  margin: 0;
-  color: white;
-
-  p {
-    margin-top: 0.3%;
-    font-size: 85%;
-  }
-}
-
-// Barra Superior END
-
 // NAVBAR START
-
-.container-navbar-grid{
-  min-height: 200px;
+@mixin config-words {
+  letter-spacing: 1.5px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
 }
 
-.navbar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 110%;
-  background-color: black opacify($color: #000000, $amount: 0);
-  align-items: center;
-  margin: 0;
-  padding: 0%;
-  width: 100%;
-  max-height: 150px;
+.fecakes {
+  transition: 500ms all;
 
-  .fecakes {
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
     transition: 500ms all;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    img{
-      position: relative;
-      left: 7%;
-      width: 60%;
-      transition: 500ms all;
-    }
-
+    max-width: 250px;
   }
-
-  li a {
-    color: black;
-    font-size: 23px;
-    width: 150%;
-    text-align: center;
-  }
-
-  .hover-navbar{
-    transition: 0.5s all;
-    width: fit-content;
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    li a{
-      text-align: center;
-    }
-  }
-
-  .barra-sup{
-    width: auto;
-
-    &:hover {
-      transform: scale(1.0);
-    }
-
-  }
-
 }
 
-.dropdown-menu.bg-black.show li a{
+.dropdown-menu.bg-black.show li a {
   color: white;
   transition: all 0.5s;
   width: 100%;
 
-  &:hover{
-  background-color: white;
-  color: black;
-  transform: scale(1.06);
+  &:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.06);
   }
-
 }
 
-.hover-navbar {
+.navbar-toggler {
+  margin-bottom: 15px;
+  border: 0.5px solid black;
+  box-shadow: 1px 2px 3px black;
+  padding-top: 3px;
+}
+
+.fa-solid.fa-bars.text-black {
+  font-size: 2rem;
+}
+
+.nav-item {
+  a {
+    font-size: 2.2rem;
+  }
+}
+
+// SUBRAYADO NAVBAR START
+
+.navbar-nav {
+  margin: 2rem 1.5rem;
   display: flex;
   justify-content: space-evenly;
 }
 
-.hover-navbar a {
+.navbar-nav {
 
-  &:after{
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background: black;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
+  a {
+    @include config-words;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0;
   }
 }
 
-.hover-navbar a {
+.navbar-nav {
 
-  &:hover:after{
-  transform-origin: left;
-  transform: scaleX(1);
+  a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: black;
+    /*animacion de derecha a izquierda*/
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
   }
 }
 
+.navbar-nav {
 
+  a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+}
+
+// SUBYADO NAVBAR FIN
+
+@media screen and (min-width: 992px) {
+  .navbar-nav {
+    position: relative;
+    left: 8vh;
+    gap: 50px;
+    padding-right: 10px;
+    width: 90%;
+
+    .nav-item {
+      a {
+        color: black;
+      }
+    }
+
+  }
+
+  .navbar-nav {
+    gap: 1.5%;
+
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1165px) {
+  .navbar-nav {
+    gap: 5%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .navbar-nav {
+    gap: 0;
+    margin-top: 0;
+
+    .nav-item {
+      a {
+        color: black;
+        justify-content: center;
+
+      }
+    }
+  }
+
+  .container-fluid {
+    a:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+  }
+}
 
 @media screen and (max-width: 320px) {
   /* Navbar START*/
@@ -140,28 +168,18 @@
   .navbar {
     margin-bottom: 0%;
     align-items: end;
-    padding: 0%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 85% 14%;
     background-color: black;
-    color: white;
     justify-items: center;
+    min-width: 100%;
+    padding-left: 10%;
 
     img {
       width: 50%;
-      margin-bottom: 0%;
-      margin-left: 26%;
-    }
-
-    a {
-      grid-column-start: 1;
-      grid-column-end: 5;
-      margin-top: 0%;
     }
 
     li a {
-      color: white;
-      font-size: 50%;
+      color: black;
+      font-size: 2rem;
       text-align: center;
       text-decoration: none;
     }
@@ -169,6 +187,7 @@
 
   /* Navbar END*/
 }
+
 
 // NAVBAR END
 
