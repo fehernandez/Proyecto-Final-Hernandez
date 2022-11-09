@@ -463,7 +463,16 @@ h1 {
 
     .container-button-more {
         margin-top: 5%;
+
+        .btn-outline-dark:hover{
+            color: white;
+            background-color: black;
+
+        }
     }
+
+
+
 }
 
 @media screen and (min-width: 1100px) {
@@ -481,7 +490,6 @@ h1 {
             background-color: transparent;
             @include config-words;
             margin-bottom: 1rem;
-            left: 41%;
         }
 
     }

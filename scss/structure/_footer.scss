@@ -32,14 +32,6 @@
   min-width: 16%;
   margin: 0%;
 
-  li {
-    transition: all 500ms;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
   a {
     color: black;
   }
@@ -71,6 +63,55 @@
 }
 
 /* NAVBAR FOOTER END */
+
+// SUBRAYADO NAVBAR START
+
+.border-narbar-lista {
+  margin: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column
+}
+
+.border-narbar-lista {
+
+  a {
+    @include config-words;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0;
+  }
+}
+
+.border-narbar-lista {
+
+  a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: black;
+    /*animacion de derecha a izquierda*/
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.border-narbar-lista {
+
+  a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+}
+
+// SUBYADO NAVBAR FIN
+
 
 /* FOOTER END */
 

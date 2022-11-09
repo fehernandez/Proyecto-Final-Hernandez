@@ -26,14 +26,10 @@
 .recetas {
   display: flex;
   flex-direction: column;
-  width: 100%;
   text-align: center;
 
   h3 {
     @include config-words;
-    position: relative;
-    width: min-content;
-    left: 45%;
     padding-bottom: 0;
     margin-bottom: 3%;
     transition: 500ms all;
@@ -44,24 +40,6 @@
     h3:hover {
       transform: scale(1.1);
     }
-  }
-
-  h3:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    background: black;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  h3:hover:after {
-    transform-origin: left;
-    transform: scaleX(1);
   }
 
   img {
@@ -143,28 +121,40 @@
 .container-grid-recetas-productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
   margin-top: 40px;
   justify-items: center;
-  gap: 2rem;
+  gap: 6rem;
+
+  img{
+    max-height: 250px;
+    min-height: 250px;
+  }
 
 }
 
+.recetas{
+  h3{
+    text-align: center;
+
+  }
+}
+
 .card-title {
-  text-align: center;
   font-size: 1.5rem;
 }
 
 .card-body{
   padding-bottom: 0;
 }
+
 .ingredientes-list {
   padding-left: 0%;
   align-items: end;
 
   li {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -193,14 +183,6 @@
 
 .card-body{
   padding-bottom: 0;
-}
-.ingredientes-list {
-  padding-left: 0%;
-  align-items: end;
-
-  li {
-    font-size: 1.2rem;
-  }
 }
 
 .card.mb-3.border-dark {

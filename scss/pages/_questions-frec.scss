@@ -1,13 +1,5 @@
 /* PREGUNTAS FRECUENTES START*/
 
-.info-preg-frec-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  margin: 5%;
-  padding-bottom: 30px;
-  gap: 55px;
-}
-
 .info-preg-frec {
 
   h2 {
@@ -17,7 +9,6 @@
     font-size: 3rem;
 
   }
-
 
   p {
     border-radius: 15px;
@@ -71,9 +62,6 @@
 
 }
 
-
-
-
 @media screen and (min-width: 992px) {
 
   .info-preg-frec-grid {
@@ -84,8 +72,7 @@
     margin: 2%;
   }
 
-  .info-preg-frec {
-
+  .info-preg-frec {    
     h2 {
       color: black;
       text-align: center;
@@ -100,6 +87,8 @@
       box-shadow: 2px 2px 10px black;
       font-size: 1.5rem;
       padding: 7px;
+      height: 100%;
+      
     }
   }
 
