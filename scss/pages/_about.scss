@@ -1,24 +1,25 @@
 /* ACERCA DE INCIO */
-.container-grid-acerca-de{
+.container-grid-acerca-de {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  ;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 40px;
   justify-items: center;
   gap: 5rem;
 
-  img{
+  img {
     min-height: 200px;
     max-height: 200px;
   }
 }
 
-.card-title{
+.card-title {
   font-size: 2rem;
 }
 
-.card-text{
+.card-text {
   font-size: 1.5rem;
 }
 

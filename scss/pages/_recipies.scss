@@ -1,5 +1,4 @@
-/* RECETAS START */
-/* RECETAS-IMAGENES START */
+/* RECETAS GENERAL START */
 
 .container-recetas-flex {
   display: flex;
@@ -15,9 +14,9 @@
 
 .container-recetas-grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: 1fr;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 3%;
   position: relative;
   gap: 0;
   text-align: center;
@@ -43,7 +42,7 @@
   }
 
   img {
-    width: 34%;
+    width: 40%;
     box-shadow: 1px 1px 15px black;
     border-radius: 5px;
     transition: 1000ms all;
@@ -93,12 +92,9 @@
 }
 
 
-/* RECETAS-IMAGENES END */
-
 /* ASIDE TEXT START */
 
 .container-texto-aside {
-  width: 40%;
   text-align: center;
   align-items: center;
 }
@@ -114,66 +110,91 @@
 
 // ASIDE TEXT END
 
-/* RECETAS END */
+// BLACK BAR START
 
-// RECETAS ALFAJORES START
+.black-bar-recipe {
+  background-color: black;
+  width: 100%;
+  margin-top: 3%;
+  padding: 3%;
+  text-align: center;
 
-.container-grid-recetas-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-top: 40px;
-  justify-items: center;
-  gap: 6rem;
+  a {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
 
-  img{
-    max-height: 250px;
-    min-height: 250px;
+  p {
+    font-size: 3rem;
+    color: white;
+  }
+
+
+  .fa-solid.fa-arrow-down {
+    font-size: 4rem;
   }
 
 }
 
-.recetas{
-  h3{
+// BLACK BAR END
+
+/* RECETAS GENERAL END */
+
+
+// RECETAS SECCIONES PRODUCTOS START
+
+.container-grid-recetas-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 40px;
+  justify-items: center;
+  gap: 10rem;
+
+  .card-title {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    padding: 7px;
+  }
+}
+
+.recetas {
+  h3 {
     text-align: center;
 
   }
 }
 
-.card-title {
-  font-size: 1.5rem;
+.card {
+
+  img {
+    min-height: 25rem;
+    max-height: 25rem;
+  }
 }
 
-.card-body{
-  padding-bottom: 0;
+.card-body {
+  padding: 0;
 }
 
 .ingredientes-list {
   padding-left: 0%;
   align-items: end;
+  padding: 10px;
 
   li {
     font-size: 1.7rem;
+
   }
 }
 
 .card.mb-3.border-dark {
   width: 100%;
-}
-
-// RECETAS ALFAJORES END
-
-// RECETAS BUDINES START
-
-.container-grid-recetas-budines {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 40px;
-  gap: 2rem;
-
 }
 
 .card-title {
@@ -181,7 +202,7 @@
   font-size: 1.5rem;
 }
 
-.card-body{
+.card-body {
   padding-bottom: 0;
 }
 
@@ -189,13 +210,14 @@
   width: 100%;
 }
 
+// RECETAS SECCIONES PRODUCTOS END
 
 
 @media screen and (min-width: 320px) {
 
 
   .container-recetas-padre {
-    margin-top: 5%;
+    margin-top: 2%;
   }
 
   .container-recetas-grid {
@@ -210,15 +232,137 @@
   }
 
   .container-texto-aside {
-    width: 100%;
 
     .texto-aside {
       p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         margin-top: 5%;
         padding: 0.5rem;
 
       }
     }
   }
+}
+
+@media screen and (max-width: 991px) {
+
+  .texto-aside {
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container-recetas-grid {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+
+  .container-texto-aside {
+
+    .texto-aside {
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .container-tienda-1 {
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .recetas {
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+
+
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .receta {
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+  }
+
+  .texto-aside {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .black-bar-recipe {
+
+    .fa-solid.fa-arrow-down {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+
+
+
+
+}
+
+@media screen and (min-width: 1100px) {
+
+
+  .recetas {
+
+    img {
+      margin-bottom: 0;
+      width: 330px;
+    }
+
+    h3 {
+      background-color: transparent;
+      @include config-words;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+
+  .container-recetas-grid-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 775px) {
+
+  .container-grid-recetas-productos {
+
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
 }
